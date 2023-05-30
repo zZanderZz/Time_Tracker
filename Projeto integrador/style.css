@@ -1,0 +1,82 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url("./imagens/background-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Landing Page */
+
+.textos-superiores{
+    padding: 80px 0 0 0;
+    align-items: center;
+    text-align: center;
+    color: snow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button{
+    border-radius: 30px;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.418);
+    color: white;
+    
+    justify-content: center;
+    text-align: center;
+    float: left;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 75px 30px 0 0;
+
+}
+
+/* Login Page */
+
+.campos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.campos input{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-style: none;
+    border-radius: 25px;
+    height: 45px;
+    width: 100%;
+    margin: 5px 0;
+    padding-left: 10px;
+    color: white;   
+}
+
+.campos input::placeholder{
+    color: white;
+    opacity: 80%;
+}
+
+.botao button{
+    background-color: #20D67E;
+    border-style: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 390px;
+    margin: 5px 0;
+    padding-left: 10px;
+    color: white;
+    -webkit-text-stroke: 1px;
+}
+
+.checked{
+    margin: 7px 37.4%;
+    color: white;
+    align-items: left;
+}
