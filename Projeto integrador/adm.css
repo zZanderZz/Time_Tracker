@@ -74,17 +74,14 @@ hr {
     width: 75%;
     border-radius: 10px;
     margin: 5px 0;
+}
+.cabe-tarefas{
     display: grid;
-    grid: 100% /  97% 100% 100%;
+    grid: 100%/ 98% 100% 100%;
 }
 
 .AddTarefa h3{
     margin: 10px 10px 50px 10px;
-}
-
-.Tarefas h4 {
-    padding: 0;
-    margin: 0;
 }
 
 span{
@@ -101,11 +98,9 @@ span:active{
     display: none; /* Oculta o conteúdo inicialmente */
     margin: 0;
     padding: 0;
-    width: 75%;
-    height: 200px;
+    width: 100%;
+    height: 10%;
 }
-
-
 
 .btn-adicionar {
     margin: 10px 10px 10px 0px;
@@ -125,4 +120,25 @@ span:active{
 
 .btn-adicionar:focus {
     outline: none;
+}
+
+.dentroDaTarefa{
+    display: flex;
+    background-color: #cacaca;
+    width: 97%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dentroDaTarefa textarea{
+    border: none;
+    background-color: #33333300;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    padding: 12px;
+    resize: both;
+    font-size: medium;
+    word-wrap: initial;
 }

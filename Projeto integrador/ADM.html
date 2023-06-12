@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>TimeTracker - Administrador</title>
-    <link rel="stylesheet" type="text/css" href="adm.css"/>
+    <link rel="stylesheet" type="text/css" href="adm.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
 </head>
+
 <body>
     <div>
         <ul>
@@ -16,24 +18,94 @@
         <hr>
     </div>
 
-    <center><h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 15px 0;">Setor Sala de Máquinas</h2></center>
+    <center>
+        <h2
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 15px 0;">
+            Setor Sala de Máquinas</h2>
+    </center>
+
     <div style="display: grid; grid-template-columns: 25% 75%">
         <div style="width:100%; height: auto;" class="DivTdsTarefas">
-            <a href="#"><h4>Todas as tarefas</h4></a>
-            <a href="#"><h4 style="opacity: 40%;">Classificação das...</h4></a>            
+            <a href="#">
+                <h4>Todas as tarefas</h4>
+            </a>
+            <a href="#">
+                <h4 style="opacity: 40%;">Classificação das...</h4>
+            </a>
         </div>
         <div style="width: 100%; height: auto;" class="AddTarefa">
             <button class="btn-adicionar">Adicionar Tarefa</button>
-            <div class="Tarefas"><h4>Tarefa 1</h4><a href="#"><span class="material-icons">chevron_right</span></a><div class="Recolhivel" style="display: none;"></div></div>
-            <div class="Tarefas"><h4>Tarefa 2</h4><a href="#"><span class="material-icons">chevron_right</span></a><div class="Recolhivel" style="display: none;"></div></div>
-            <div class="Tarefas"><h4>Tarefa3</h4><a href="#"><span class="material-icons">chevron_right</span></a><div class="Recolhivel" style="display: none;"></div></div>
-            <div class="Tarefas"><h4>Tarefa 4</h4><a href="#"><span class="material-icons">chevron_right</span></a><div class="Recolhivel" style="display: none;"></div></div>
-            <div class="Tarefas"><h4>Tarefa 5</h4><a href="#"><span class="material-icons">chevron_right</span></a><div class="Recolhivel" style="display: none;"></div></div>
-            <div class="Tarefas"><h4>Tarefa 6</h4><a href="#"><span class="material-icons">chevron_right</span></a><div class="Recolhivel" style="display: none;"></div></div>
-            <div class="Tarefas"><h4>Tarefa 7</h4><a href="#"><span class="material-icons">expand_more</span></a><div class="Recolhivel" style="display: none;"></div></div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 1</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none; ">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33">qejngoqnf</textarea>
+                    </div>
+                    <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 2</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none; ">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33">qejngoqnf</textarea>
+                    </div>
+                    <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 3</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none; ">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33">qejngoqnf</textarea>
+                    </div>
+                    <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 4</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none; ">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33">qejngoqnf</textarea>
+                    </div>
+                    <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 5</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none; ">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33">qejngoqnf</textarea>
+                    </div>
+                    <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+                    
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4>Tarefa 6</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none; ">
+                    <div class="dentroDaTarefa">
+                        <textarea rows="5" cols="33">qejngoqnf</textarea>
+                    </div>
+                    <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+                </div>
+            </div>
+
         </div>
     </div>
-   
+
 
 
     <script>
@@ -41,30 +113,31 @@
         function toggleCollapse(event) {
             event.preventDefault(); // Impede o comportamento padrão do link
             // Obtém a div recolhível correspondente
-            var collapsibleDiv = event.target.parentNode.nextElementSibling;
-    
+            var collapsibleDiv = event.target.parentNode.parentNode.nextElementSibling;
+            // console.log(event.target.parentNode.parentNode.nextElementSibling);
+
             // Alterna a exibição da div recolhível
             if (collapsibleDiv.style.display === 'none') {
-                collapsibleDiv.style.display = 'flex';
-                collapsibleDiv.textContent = "expand_more";
-
-
+                collapsibleDiv.style.display = 'inline-block';
+                event.target.textContent = "expand_more";
             } else {
                 collapsibleDiv.style.display = 'none';
-                collapsibleDiv.textContent = "chevron_right";
+                event.target.textContent = "chevron_right";
             }
         }
-    
+
         // Obtém todos os ícones de colapso
         var collapseIcons = document.getElementsByClassName('material-icons');
-    
+
         // Adiciona um ouvinte de eventos de clique a cada ícone
         for (var i = 0; i < collapseIcons.length; i++) {
             collapseIcons[i].addEventListener('click', toggleCollapse);
+
         }
     </script>
-<!--     
+    <!--     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
 </body>
+
 </html>
