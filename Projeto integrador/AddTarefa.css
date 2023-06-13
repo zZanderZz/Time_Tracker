@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 /* NAVIGATION */
 
 ol, ul {
@@ -39,113 +40,6 @@ li a {
 li a:hover {
     background-color: #d5d5d5;
 }
-
-/* CONTINUATION */
-
-hr {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(206, 206, 206);
-    height: 1px;
-    border-style: none;
-}
-
-.DivTdsTarefas{
-    text-align: right;
-    margin: 0;
-    padding-top: 90px;
-}
-
-.DivTdsTarefas h4 {
-    margin: 0 8% 5px 40%;
-    padding: 2%;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fcfcfc;
-}
-
-.DivTdsTarefas a{
-    color: inherit;
-}
-
-.Tarefas{
-    background-color: #ebebeb;
-    padding: 15px 20px 8px 20px;
-    width: 75%;
-    border-radius: 10px;
-    margin: 5px 0;
-}
-.cabe-tarefas{
-    display: grid;
-    grid: 100%/ 98% 100% 100%;
-}
-
-.AddTarefa h3{
-    margin: 10px 10px 50px 10px;
-}
-
-span{
-    margin: 0;
-    padding: 0;
-    color: black;
-}
-
-span:active{
-    color: #5a5a5a;
-}
-
-.Recolhivel {
-    display: none; /* Oculta o conteúdo inicialmente */
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 10%;
-}
-
-.btn-adicionar {
-    margin: 10px 10px 10px 0px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-
-.btn-adicionar:hover {
-    background-color: #f5f5f5;
-    
-}
-
-.btn-adicionar:focus {
-    outline: none;
-}
-
-.dentroDaTarefa{
-    display: flex;
-    background-color: #cacaca;
-    width: 97%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.dentroDaTarefa textarea{
-    border: none;
-    background-color: #33333300;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    padding: 12px;
-    font-size: medium;
-    outline: none;
-    border-style: none;
-    overflow: auto;   
-    border-color: transparent;
-}
-
 
 /* -------------------------------------------- */
 
@@ -186,3 +80,93 @@ span:active{
   .dropdown:hover {display: inline-block;}
   .dropdown:hover .dropdown-content {display: block;}
   .dropdown:hover .dropbtn {background-color: #d5d5d5;}
+
+/* REST OF THE PAGE */
+
+.All{
+    width: 100%;
+    height: 630px;
+    display: grid;
+    grid: 100% / 25% 25% 25% 25%;
+}
+
+.Tarefa{
+    background-color: #d4d4d4;
+    width: 300%;
+    height: 100%;
+    margin-left: 50%;
+    padding: 5%;
+
+    border-radius: 20px;
+}
+
+.Tarefa textarea{
+    border: none;
+    background-color: #33333300;
+    padding: 0;
+    margin: 2%;
+    width: 95%;
+    height: 25%;
+    padding: 12px;
+    font-size: medium;
+    outline: none;
+    border-style: none;
+    overflow: auto;   
+    border-color: transparent;
+}
+
+.Tarefa p{
+    font-size: large;
+    padding: 20px;
+    display: inline-block;
+}
+
+.btn-adicionar {
+    margin: 10px 10px 10px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #39ff67;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-color: #33333300;
+}
+
+
+.btn-adicionar:hover {
+    background-color: #69ff8c;
+}
+
+.Tarefa input{
+    float: right;
+    display: flex;
+    margin: 25px;
+}
+
+.minimal-date {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Adicione estilos específicos para o ícone do calendário, se aplicável */
+  .minimal-date::-webkit-calendar-picker-indicator {
+    filter: invert(50%);
+  }
+  
+  .minimal-date::-moz-calendar-picker-indicator {
+    filter: invert(50%);
+  }
+
+  .Tarefa #MoreOptions{
+    float: right;
+    display: flex;
+    margin: 28px;
+  }
