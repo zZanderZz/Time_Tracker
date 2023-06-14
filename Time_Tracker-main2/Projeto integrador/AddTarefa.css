@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background: white;
@@ -11,15 +11,16 @@ body{
     padding: 0;
 }
 
+
 /* NAVIGATION */
 
-ol, ul {
+ol,
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0px;
     overflow: hidden;
     background-color: #eeeeee;
-
 }
 
 li {
@@ -36,10 +37,13 @@ li a {
     -webkit-text-stroke: 0.5px black;
 }
 
+
 /* Change the link color to #111 (black) on hover */
+
 li a:hover {
     background-color: #d5d5d5;
 }
+
 
 /* -------------------------------------------- */
 
@@ -52,55 +56,67 @@ li a:hover {
     cursor: pointer;
     text-decoration: none;
     -webkit-text-stroke: 1px black;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: absolute;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     right: 0;
     background-color: #eeeeee;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #d5d5d5;;}
-  .dropdown:hover {display: inline-block;}
-  .dropdown:hover .dropdown-content {display: block;}
-  .dropdown:hover .dropbtn {background-color: #d5d5d5;}
+}
+
+.dropdown-content a:hover {
+    background-color: #d5d5d5;
+    ;
+}
+
+.dropdown:hover {
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #d5d5d5;
+}
+
 
 /* REST OF THE PAGE */
 
-.All{
+.All {
     width: 100%;
     height: 630px;
     display: grid;
     grid: 100% / 25% 25% 25% 25%;
 }
 
-.Tarefa{
+.Tarefa {
     background-color: #d4d4d4;
     width: 300%;
     height: 100%;
     margin-left: 50%;
     padding: 5%;
-
     border-radius: 20px;
 }
 
-.Tarefa textarea{
+.Tarefa textarea {
     border: none;
     background-color: #33333300;
     padding: 0;
@@ -111,11 +127,11 @@ li a:hover {
     font-size: medium;
     outline: none;
     border-style: none;
-    overflow: auto;   
+    overflow: auto;
     border-color: transparent;
 }
 
-.Tarefa p{
+.Tarefa p {
     font-size: large;
     padding: 20px;
     display: inline-block;
@@ -133,12 +149,11 @@ li a:hover {
     border-color: #33333300;
 }
 
-
 .btn-adicionar:hover {
     background-color: #69ff8c;
 }
 
-.Tarefa input{
+.Tarefa input {
     float: right;
     display: flex;
     margin: 25px;
@@ -154,19 +169,21 @@ li a:hover {
     font-size: 14px;
     color: #333;
     border-bottom: 1px solid #333;
-  }
-  
-  /* Adicione estilos específicos para o ícone do calendário, se aplicável */
-  .minimal-date::-webkit-calendar-picker-indicator {
-    filter: invert(50%);
-  }
-  
-  .minimal-date::-moz-calendar-picker-indicator {
-    filter: invert(50%);
-  }
+}
 
-  .Tarefa #MoreOptions{
+
+/* Adicione estilos específicos para o ícone do calendário, se aplicável */
+
+.minimal-date::-webkit-calendar-picker-indicator {
+    filter: invert(50%);
+}
+
+.minimal-date::-moz-calendar-picker-indicator {
+    filter: invert(50%);
+}
+
+.Tarefa #MoreOptions {
     float: right;
     display: flex;
     margin: 28px;
-  }
+}
