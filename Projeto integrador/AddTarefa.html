@@ -17,7 +17,7 @@
             <li>
                 <div class="dropdown" style="float:left;">
                     <button class="dropbtn"><span class="material-icons">menu</span></button>
-                    <div class="dropdown-contentt" style="left:0;">
+                    <div class="dropdown-content" style="left:0;">
                         <a href="#">Editar Funcionários</a>
                         <a href="#">Funcionários</a>
                     </div>
@@ -34,28 +34,15 @@
 
     <div class="All">
         <div class="Tarefa">
-            <strong><p>Tarefa 1</p></strong>
-            <span class="material-icons" id="MoreOptions" onclick="toggleDropdown()">more_vert</span>
+            <p>Tarefa 1</p>
+            <span class="material-icons" id="MoreOptions">more_vert</span>
             <input type="date" class="minimal-date">
-            <textarea class="textarea" rows="5" cols="33" placeholder="Anotação..." oninput="capitalizeFirstLetter()"></textarea>
+            <textarea class="textarea" rows="5" cols="33" placeholder="Anotação..."></textarea>
             <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
         </div>
     </div>
 
-    <script>
-        function toggleDropdown() {
-            var dropdownContent = document.querySelector('.dropdown-content');
-            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
-    
-    <script>
-        function capitalizeFirstLetter() {
-            var textarea = document.querySelector('.textarea');
-            var text = textarea.value;
-            textarea.value = text.charAt(0).toUpperCase() + text.slice(1);
-        }
-    </script>
+
 </body>
 
 </html>

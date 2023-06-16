@@ -63,7 +63,7 @@ li a:hover {
     display: inline-block;
 }
 
-.dropdown-contentt {
+.dropdown-content {
     display: none;
     position: absolute;
     right: 0;
@@ -73,14 +73,14 @@ li a:hover {
     z-index: 1;
 }
 
-.dropdown-contentt a {
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-contentt a:hover {
+.dropdown-content a:hover {
     background-color: #d5d5d5;
     ;
 }
@@ -89,7 +89,7 @@ li a:hover {
     display: inline-block;
 }
 
-.dropdown:hover .dropdown-contentt {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -117,30 +117,24 @@ li a:hover {
 }
 
 .Tarefa textarea {
+    border: none;
     background-color: #33333300;
     padding: 0;
     margin: 2%;
     width: 95%;
-    height: 68%;
+    height: 25%;
     padding: 12px;
     font-size: medium;
     outline: none;
-    border: none;
+    border-style: none;
     overflow: auto;
     border-color: transparent;
-    font-family: 'Courier New', Courier, monospace;
-    -webkit-text-stroke: 1px;
 }
 
 .Tarefa p {
-    font-size: larger;
+    font-size: large;
     padding: 20px;
     display: inline-block;
-    font-family: "Gill Sans", sans-serif;
-}
-
-.Tarefa textarea::first-letter{
-    text-transform: uppercase;
 }
 
 .btn-adicionar {

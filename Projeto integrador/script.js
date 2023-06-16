@@ -1,72 +1,51 @@
-const express = require("express");
-const hbs = require("hbs");
-const routes = require("./routes/index.js");
-const knex = require('knex');
-const knexfile = require('./knexfile');
+const startButton = document.getElementById('startTimerButton');
+const resetButton = document.getElementById('resetTimerButton');
+const timeInput = document.getElementById('timeInput');
+const display = document.getElementById('timerDisplay');
+let timerInterval;
+let isTimerActive = false;
 
+// Função para iniciar o cronômetro com o tempo digitado
+function startTimer(event) {
+    if (event.key && event.key !== 'Enter') return; // Verifica se a tecla pressionada é "Enter"
 
-const input = window.document.getElementById("input");
+    const time = parseFloat(timeInput.value); // Obtém o tempo digitado como um número decimal
 
-const db = knex(knexfile.development);
+    if (!isNaN(time) && time > 0) {
+        const duration = time * 60 * 60; // Converte o tempo para segundos
+        let timer = duration, minutes, seconds;
+        clearInterval(timerInterval); // Limpa qualquer intervalo de timer existente
 
-const app = express();
-app.set('view engine', 'hbs');
+        // Função de atualização do cronômetro
+        function updateTimer() {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+            if (--timer < 0) {
+                clearInterval(timerInterval); // Interrompe o cronômetro quando o tempo acabar
+            }
+        }
 
-hbs.registerPartials(`${__dirname}/views`);
-app.set("view engine", "hbs");
-app.set("view options", {
-    layout: "layouts/default",
-});
-
-app.use(express.static("public"));
-
-app.use(routes);
-
-hbs.registerHelper("formataCPF", (data) => {
-    return data
-        .replace(/[^\d]/g, "")
-        .replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
-});
-
-hbs.registerHelper("formataTelefone", (data) => {
-    return data.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4");
-});
-
-hbs.registerHelper("formataDataNsc", (data) => {
-    const dataCompleta = new Date(data);
-    const dia = String(dataCompleta.getDay()).padStart(2, "0");
-    const mes = String(dataCompleta.getMonth() + 1).padStart(2, "0");
-    const ano = dataCompleta.getFullYear();
-    return `${dia}/${mes}/${ano}`;
-});
-
-function redirecionarPagina(tipo) {
-    if (tipo === 'funcionario') {
-        window.location.href = 'pagina_funcionario.html';
-    } else if (tipo === 'administrador') {
-        window.location.href = 'pagina_administrador.html';
+        // Inicia o cronômetro
+        updateTimer();
+        timerInterval = setInterval(updateTimer, 1000);
+        isTimerActive = true;
     }
 }
-exports.up = function(knex) {
-    return knex.schema.createTable('funcionarios', function(table) {
-        table.increments('id');
-        table.string('nome');
-        table.string('cpf');
-        table.timestamps(true, true);
-    });
-};
 
-exports.down = function(knex) {
-    return knex.schema.dropTable('funcionarios');
-};
+// Função para zerar o cronômetro e redefinir o campo de tempo
+function resetTimer() {
+    clearInterval(timerInterval);
+    display.textContent = '00:00';
+    timeInput.value = '';
+    isTimerActive = false;
+}
 
-app.listen(8080, (error) => {
-    if (error) {
-        console.log(error);
-    }
-    console.log("O servidor esta rodando na porta 8080! 👍");
+// Adiciona ouvintes de eventos para os botões
+startButton.addEventListener('click', startTimer);
+resetButton.addEventListener('click', resetTimer);
+timeInput.addEventListener('keyup', startTimer); // Ouve o evento de pressionar tecla no campo de tempo
 
-});
