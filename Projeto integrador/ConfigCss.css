@@ -11,6 +11,30 @@ body {
     padding: 0;
 }
 
+/* NAVIGATION */
+
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+li {
+    float: left;
+    margin: 0;
+}
+
+li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px black;
+}
 
 /* NAVIGATION */
 
@@ -98,93 +122,54 @@ li a:hover {
 }
 
 
-/* REST OF THE PAGE */
-
-.All {
-    width: 100%;
-    height: 630px;
-    display: grid;
-    grid: 100% / 25% 25% 25% 25%;
-}
-
-.Tarefa {
-    background-color: #d4d4d4;
-    width: 300%;
-    height: 100%;
-    margin-left: 50%;
-    padding: 5%;
-    border-radius: 20px;
-}
-
-.Tarefa textarea {
-    border: none;
-    background-color: #33333300;
-    padding: 0;
-    margin: 2%;
-    width: 95%;
-    height: 70%;
-    padding: 12px;
-    font-size: medium;
-    outline: none;
-    border-style: none;
-    overflow: auto;
-    border-color: transparent;
-    resize: none;
-}
-
-.Tarefa p {
-    font-size: large;
+.configuracoes {
+    width: 80%;
+    margin: 50px auto 0 auto;
     padding: 20px;
-    display: inline-block;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn-adicionar {
-    margin: 10px 10px 10px 0px;
-    padding: 10px 20px;
+.configuracoes h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.configuracoes p {
     font-size: 16px;
-    border-radius: 5px;
-    background-color: #39ff67;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-color: #33333300;
+    margin-bottom: 10px;
 }
 
-.btn-adicionar:hover {
-    background-color: #69ff8c;
+.configuracoes label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-.Tarefa input {
-    float: right;
-    display: flex;
-    margin: 25px;
+.configuracoes input[type="checkbox"],
+.configuracoes input[type="radio"] {
+    margin-right: 10px;
 }
 
-.minimal-date {
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    outline: none;
+.configuracoes select {
+    margin-top: 10px;
+    font-size: 16px;
     padding: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #333;
-    border-bottom: 1px solid #333;
 }
 
-
-/* Adicione estilos específicos para o ícone do calendário, se aplicável */
-
-.minimal-date::-webkit-calendar-picker-indicator {
-    filter: invert(50%);
+.configuracoes button {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    border-style: outset;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.minimal-date::-moz-calendar-picker-indicator {
-    filter: invert(50%);
+.configuracoes button:hover {
+    background-color: #cacaca;
 }
 
-.Tarefa #MoreOptions {
-    float: right;
-    display: flex;
-    margin: 28px;
-}
