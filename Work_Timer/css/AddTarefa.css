@@ -1,0 +1,190 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: white;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* NAVIGATION */
+
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #007bff;
+}
+
+li {
+    float: left;
+    margin: 0;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: #006bdd;
+}
+
+
+/* -------------------------------------------- */
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 12px 6px 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #eeeeee;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #d5d5d5;
+    ;
+}
+
+.dropdown:hover {
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #d5d5d5;
+}
+
+
+/* REST OF THE PAGE */
+
+.All {
+    width: 100%;
+    height: 630px;
+    display: grid;
+    grid: 100% / 25% 25% 25% 25%;
+}
+
+.Tarefa {
+    background-color: #d4d4d4;
+    width: 300%;
+    height: 100%;
+    margin-left: 50%;
+    padding: 5%;
+    border-radius: 20px;
+}
+
+.Tarefa textarea {
+    border: none;
+    background-color: #33333300;
+    padding: 0;
+    margin: 2%;
+    width: 95%;
+    height: 70%;
+    padding: 12px;
+    font-size: medium;
+    outline: none;
+    border-style: none;
+    overflow: auto;
+    border-color: transparent;
+    resize: none;
+}
+
+.Tarefa p {
+    font-size: large;
+    padding: 20px;
+    display: inline-block;
+}
+
+.btn-adicionar {
+    margin: 10px 10px 10px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #39ff67;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-color: #33333300;
+}
+
+.btn-adicionar:hover {
+    background-color: #69ff8c;
+}
+
+.Tarefa input {
+    float: right;
+    display: flex;
+    margin: 25px;
+}
+
+.minimal-date {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+
+/* Adicione estilos específicos para o ícone do calendário, se aplicável */
+
+.minimal-date::-webkit-calendar-picker-indicator {
+    filter: invert(50%);
+}
+
+.minimal-date::-moz-calendar-picker-indicator {
+    filter: invert(50%);
+}
+
+.Tarefa #MoreOptions {
+    float: right;
+    display: flex;
+    margin: 28px;
+}

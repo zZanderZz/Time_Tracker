@@ -1,0 +1,32 @@
+// Definir o tempo inicial em segundos
+let tempoInicial = 60;
+
+// Função para formatar o tempo
+function formatarTempo(tempo) {
+    let minutos = Math.floor(tempo / 60);
+    let segundos = tempo % 60;
+
+    if (minutos < 10) {
+        minutos = "0" + minutos;
+    }
+
+    if (segundos < 10) {
+        segundos = "0" + segundos;
+    }
+
+    return minutos + ":" + segundos;
+}
+
+// Função que será executada a cada segundo
+function atualizarTempo() {
+    if (tempoInicial > 0) {
+        tempoInicial--;
+        document.getElementById("tempo").textContent = formatarTempo(tempoInicial);
+    } else {
+        clearInterval(intervalo);
+        alert("Tempo esgotado!");
+    }
+}
+
+// Iniciar o timer
+let intervalo = setInterval(atualizarTempo, 1000);
