@@ -18,8 +18,9 @@
                 <div class="dropdown" style="float:left;">
                     <button class="dropbtn"><span class="material-icons">menu</span></button>
                     <div class="dropdown-content" style="left:0;">
-                        <a href="#">Editar Funcionários</a>
+                        <a href="http://localhost:8080/funcionarios">Editar Funcionários</a>
                         <a href="#">Funcionários</a>
+                        <a href="#">Setor</a>
                     </div>
                 </div>
             </li>
@@ -38,7 +39,7 @@
             <span class="material-icons" id="MoreOptions">more_vert</span>
             <input type="date" class="minimal-date">
             <textarea class="textarea" rows="5" cols="33" placeholder="Anotação..." oninput="capitalizeFirstLetter()"></textarea>
-            <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;">Salvar</button>
+            <button class="btn-adicionar" style="width: 100px; height: 40px; float: right; margin-right: 25px;" onclick="eventListeners()">Salvar</button>
         </div>
     </div>
 
@@ -49,6 +50,8 @@
             textarea.value = text.charAt(0).toUpperCase() + text.slice(1);
         }
     </script>
+
+    <script src="script.js"></script>
     
 
 </body>

@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 const path = require('path')
 const session = require('express-session');
 const passport = require('passport');
-const home = require('./routes/home')
-const cadastro = require('./routes/cadastro')
-const add_bd = require('./routes/add_bd')
+// const home = require('./routes/home');
+const cadastro = require('./routes/cadastro.routes.js')
+// const add_bd = require('./routes/add_bd')
 
 require('./config/auth')(passport);
 
@@ -49,7 +49,7 @@ hbs.registerHelper("formataDataNsc", (data) => {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
+// app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -63,15 +63,15 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //adionando Rotas
-app.use('/', home)
+// app.use('/', home)
 app.use('/cadastro', cadastro)
-app.use('/add_bd', add_bd)
+// app.use('/add_bd', add_bd)
 
 
 app.listen(8080, (error) => {
 
     console.log(`Servidor iniciado!`);
-    console.log(`http://localhost:${PORT}`);
+    // console.log(`http://localhost:${PORT}`);
     console.log('BREAK SERVER ctrl + c');
 
     if (error) {

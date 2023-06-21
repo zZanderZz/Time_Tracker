@@ -113,7 +113,7 @@ span {
 
 .dentroDaTarefa {
     display: flex;
-    background-color: #cacaca;
+    background-color: #e4e4e4;
     width: 97%;
     height: 100%;
     border-radius: 10px;
@@ -189,4 +189,21 @@ span {
 
 .dropdown:hover .dropbtn {
     background-color: #d5d5d5;
+}
+
+.marca-lida-btn {
+    background-color: #007bff;
+    height: 40px;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 5px 26px 0 0;
+    float: right;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.marca-lida-btn:hover {
+    background-color: #006bdd;
 }

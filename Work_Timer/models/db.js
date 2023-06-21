@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('SistemaLoginNodeJs', 'root', 'root', {
+const sequelize = new Sequelize('empresa', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 })

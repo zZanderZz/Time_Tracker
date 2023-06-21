@@ -1,4 +1,4 @@
-const con = require("../mysql-connection");
+const con = require("../mysql_connection");
 
 module.exports = {
     buscaTodos: () => {

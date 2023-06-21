@@ -1,4 +1,3 @@
-const routes = new express.Router();
 const express = require('express')
 const router = express.Router()
 const passport = require('passport')
@@ -6,11 +5,12 @@ const funcionariosRoutes = require("./funcionarios.router");
 
 //adionando models
 const Post = require('../models/Post')
-
+const routes = new express.Router();
 
 
 router.get('/login', (req, res) => {
-    res.render('login/login')
+//    res.render('login/login')
+    res.send("Teste");
 })
 
 router.post('/auth', (req, res, next) => {

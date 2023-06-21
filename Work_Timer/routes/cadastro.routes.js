@@ -6,7 +6,8 @@ const Post = require('../models/Post')
 
 
 router.get('/', (req, res) => {
-    res.render('cadastro/cadastro')
+    // res.render('cadastro')
+    res.send("Teste")
 })
 
 
