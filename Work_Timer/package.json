@@ -30,17 +30,13 @@
 }
 -------------------
 {
-    "name": "systemlogin",
+    "name": "TB_Integrador",
     "version": "1.0.0",
-    "description": "sistema de login usando nodejs",
-    "main": "server.js",
+    "description": "",
+    "main": "index.js",
     "scripts": {
         "server": "nodemon",
         "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/IsaacDSC/Sistema-de-Login-NodeJs.git"
     },
     "keywords": [
         "sistema",
@@ -52,10 +48,7 @@
     ],
     "author": "IsaacDSc",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/IsaacDSC/Sistema-de-Login-NodeJs/issues"
     },
-    "homepage": "https://github.com/IsaacDSC/Sistema-de-Login-NodeJs#readme",
     "dependencies": {
         "bcrypt": "^5.0.0",
         "bcryptjs": "^2.4.3",
