@@ -18,8 +18,8 @@ function startTimer(event) {
 
         // Função de atualização do cronômetro
         function updateTimer() {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+            minutes = Math.floor(timer / 60);
+            seconds = timer % 60;
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
             display.textContent = minutes + ":" + seconds;
@@ -54,7 +54,6 @@ function toggleCollapse(event) {
     event.preventDefault(); // Impede o comportamento padrão do link
     // Obtém a div recolhível correspondente
     var collapsibleDiv = event.target.parentNode.parentNode.nextElementSibling;
-    // console.log(event.target.parentNode.parentNode.nextElementSibling);
     
     // Alterna a exibição da div recolhível
     if (collapsibleDiv.style.display === 'none') {
@@ -72,7 +71,6 @@ var collapseIcons = document.getElementsByClassName('expand-icon');
 // Adiciona um ouvinte de eventos de clique a cada ícone
 for (var i = 0; i < collapseIcons.length; i++) {
     collapseIcons[i].addEventListener('click', toggleCollapse);
-
 }
 
 // Função para adicionar uma nova tarefa
@@ -104,19 +102,18 @@ function adicionarTarefa() {
     }
 }
 
-
-// Função para controlar o evento de clique no ícone
-function toggleCollapse(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    // Obtém a div recolhível correspondente
-    var collapsibleDiv = event.target.parentNode.parentNode.nextElementSibling;
-    
-    // Alterna a exibição da div recolhível
-    if (collapsibleDiv.style.display === 'none') {
-        collapsibleDiv.style.display = 'block';
-        event.target.textContent = "expand_less";
-    } else {
-        collapsibleDiv.style.display = 'none';
-        event.target.textContent = "chevron_right";
-    }
-}
+function salvarTarefa(elemento) {
+    // Exibir o alerta de sucesso com o SweetAlert2
+    Swal.fire({
+      icon: 'success',
+      title: 'Salvo com sucesso',
+      showConfirmButton: false,
+      timer: 1500
+    });
+  
+    // Recolher a tarefa
+    toggleCollapse({
+      target: elemento.querySelector('.expand-icon')
+    });
+  }
+  
