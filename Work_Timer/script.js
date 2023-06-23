@@ -74,3 +74,49 @@ for (var i = 0; i < collapseIcons.length; i++) {
     collapseIcons[i].addEventListener('click', toggleCollapse);
 
 }
+
+// Função para adicionar uma nova tarefa
+function adicionarTarefa() {
+    // Obtém a div "Tarefa" existente
+    var tarefaExistente = document.querySelector(".Tarefas");
+
+    // Clona a div "Tarefa"
+    var novaTarefa = tarefaExistente.cloneNode(true);
+
+    // Obtém o número da última tarefa
+    var numeroUltimaTarefa = document.querySelectorAll(".Tarefas").length;
+
+    // Atualiza o número da nova tarefa
+    novaTarefa.querySelector("h4").textContent = "Tarefa " + (numeroUltimaTarefa + 1);
+
+    // Adiciona a nova tarefa à lista de tarefas
+    var listaTarefas = document.querySelector(".AddTarefa");
+    listaTarefas.appendChild(novaTarefa);
+
+    // Adiciona um ouvinte de eventos de clique ao ícone de colapso da nova tarefa
+    var collapseIcon = novaTarefa.querySelector('.expand-icon');
+    collapseIcon.addEventListener('click', toggleCollapse);
+
+    // Se já houver uma tarefa existente, adiciona o ouvinte de eventos ao ícone de colapso da primeira tarefa também
+    if (numeroUltimaTarefa === 0) {
+        var firstTaskCollapseIcon = tarefaExistente.querySelector('.expand-icon');
+        firstTaskCollapseIcon.addEventListener('click', toggleCollapse);
+    }
+}
+
+
+// Função para controlar o evento de clique no ícone
+function toggleCollapse(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+    // Obtém a div recolhível correspondente
+    var collapsibleDiv = event.target.parentNode.parentNode.nextElementSibling;
+    
+    // Alterna a exibição da div recolhível
+    if (collapsibleDiv.style.display === 'none') {
+        collapsibleDiv.style.display = 'block';
+        event.target.textContent = "expand_less";
+    } else {
+        collapsibleDiv.style.display = 'none';
+        event.target.textContent = "chevron_right";
+    }
+}
