@@ -105,12 +105,21 @@ function adicionarTarefa() {
 function salvarTarefa(elemento) {
     // Exibir o alerta de sucesso com o SweetAlert2
     Swal.fire({
-      icon: 'success',
-      title: 'Salvo com sucesso',
-      showConfirmButton: false,
-      timer: 1500
-    });
-  
+        title: 'Você quer salvar as alterações?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Salvar',
+        denyButtonText: `Descartar`,
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Salvo com sucesso!', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Alterações descartadas.', '', 'error')
+        }
+      });
+    
     // Recolher a tarefa
     toggleCollapse({
       target: elemento.querySelector('.expand-icon')
