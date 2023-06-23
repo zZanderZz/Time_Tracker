@@ -8,7 +8,7 @@ let isTimerActive = false;
 // Função para iniciar o cronômetro com o tempo digitado
 function startTimer(event) {
     if (event.key && event.key !== 'Enter') return; // Verifica se a tecla pressionada é "Enter"
-
+    
     const time = parseFloat(timeInput.value); // Obtém o tempo digitado como um número decimal
 
     if (!isNaN(time) && time > 0) {
@@ -23,7 +23,7 @@ function startTimer(event) {
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
             display.textContent = minutes + ":" + seconds;
-
+            
             if (--timer < 0) {
                 clearInterval(timerInterval); // Interrompe o cronômetro quando o tempo acabar
             }
@@ -48,3 +48,29 @@ function resetTimer() {
 startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
 timeInput.addEventListener('keyup', startTimer); // Ouve o evento de pressionar tecla no campo de tempo
+
+// Função para controlar o evento de clique no ícone
+function toggleCollapse(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+    // Obtém a div recolhível correspondente
+    var collapsibleDiv = event.target.parentNode.parentNode.nextElementSibling;
+    // console.log(event.target.parentNode.parentNode.nextElementSibling);
+    
+    // Alterna a exibição da div recolhível
+    if (collapsibleDiv.style.display === 'none') {
+        collapsibleDiv.style.display = 'block';
+        event.target.textContent = "expand_less";
+    } else {
+        collapsibleDiv.style.display = 'none';
+        event.target.textContent = "chevron_right";
+    }
+}
+
+// Obtém todos os ícones de colapso
+var collapseIcons = document.getElementsByClassName('expand-icon');
+
+// Adiciona um ouvinte de eventos de clique a cada ícone
+for (var i = 0; i < collapseIcons.length; i++) {
+    collapseIcons[i].addEventListener('click', toggleCollapse);
+
+}
