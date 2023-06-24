@@ -11,45 +11,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "bcrypt": "^5.1.0",
-        "body-parser": "^1.20.2",
-        "express": "^4.18.2",
-        "express-handlebars": "^7.0.7",
-        "express-session": "^1.17.3",
-        "hbs": "^4.2.0",
-        "knex": "^2.4.2",
-        "mysql": "^2.18.1",
-        "mysql2": "^3.4.0",
-        "passport": "^0.6.0",
-        "passport-local": "^1.0.0",
-        "sequelize": "^6.32.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.22"
-    }
-}
--------------------
-{
-    "name": "TB_Integrador",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "server": "nodemon",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "sistema",
-        "de",
-        "login",
-        "cadastro",
-        "usuarios",
-        "autenticate."
-    ],
-    "author": "IsaacDSc",
-    "license": "ISC",
-    },
-    "dependencies": {
         "bcrypt": "^5.0.0",
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
@@ -58,10 +19,15 @@
         "express-handlebars": "^3.1.0",
         "express-session": "^1.17.0",
         "flash": "^1.1.0",
+        "hbs": "^4.2.0",
+        "knex": "^2.4.2",
         "mysql": "^2.18.1",
         "mysql2": "^2.1.0",
         "passport": "^0.4.1",
         "passport-local": "^1.0.0",
         "sequelize": "^5.21.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
     }
 }

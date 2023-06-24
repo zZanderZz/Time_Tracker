@@ -17,6 +17,6 @@ const Post = db.sequelize.define('usuarios', {
 })
 
 //criando table in database
-//Post.sync({ force: true })
+// Post.sync({ force: true })
 
-module.exports = Post
+module.exports = Post;

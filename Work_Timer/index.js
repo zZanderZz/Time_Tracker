@@ -7,7 +7,6 @@ const path = require('path')
 const session = require('express-session');
 const passport = require('passport');
 // const home = require('./routes/home');
-const cadastro = require('./routes/cadastro.routes.js')
 // const add_bd = require('./routes/add_bd')
 
 require('./config/auth')(passport);
@@ -64,7 +63,6 @@ app.use(passport.session())
 
 //adionando Rotas
 // app.use('/', home)
-app.use('/cadastro', cadastro)
 // app.use('/add_bd', add_bd)
 
 
