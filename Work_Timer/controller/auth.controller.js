@@ -1,5 +1,5 @@
 // const funcionariosRepository = require("../repository/funcionarios.repository");
-const Post = require('../models/Post')
+const Post = require('../models/post')
 
 module.exports = {
     auth: async (req, res) =>{
@@ -7,7 +7,7 @@ module.exports = {
 
         const data = await Post.findAll( { where : [{email : email}]});
         
-        console.log(data[0].password);
+        console.log(data);
         if( data.password == password){
             return res.send("DEU CERTO!")
         }

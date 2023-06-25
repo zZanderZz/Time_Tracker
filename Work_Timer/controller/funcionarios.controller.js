@@ -8,7 +8,7 @@ module.exports = {
             .catch((error) => {
                 res.status(500).send(error);
             });
-        res.render("funcionarios", { data });
+        res.render("funcionario", { data });
     },
     buscaPorId: async(req, res) => {
         const { id } = req.params;

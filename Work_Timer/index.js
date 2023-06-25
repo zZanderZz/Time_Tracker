@@ -1,7 +1,6 @@
 const express = require("express");
 const hbs = require("hbs");
 const routes = require("./routes/index.js");
-const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path')
 const session = require('express-session');
@@ -12,7 +11,6 @@ const passport = require('passport');
 require('./config/auth')(passport);
 
 const app = express();
-app.set('view engine', 'hbs');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -20,7 +18,7 @@ app.use(express.json());
 hbs.registerPartials(`${__dirname}/views`);
 app.set("view engine", "hbs");
 app.set("view options", {
-    layout: "layouts/default",
+  layout: "layouts/default",
 });
 
 app.use(express.static("public"));
@@ -48,9 +46,7 @@ hbs.registerHelper("formataDataNsc", (data) => {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
-app.set('view engine', 'handlebars')
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
     secret: 'secret',

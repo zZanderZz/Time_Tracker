@@ -51,19 +51,18 @@
 <script>
 
     async function login() {
-        const usuario = window.document.getElementById("usuario").value
-        const senha = window.document.getElementById("senha").value
-        const body = { "POST"}
-        const options = {
-            method: 'POST',
-            body: Object.keys(body)
-                .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(body[k])}`)
-                .join('&')
-        }
+        // const usuario = window.document.getElementById("usuario").value
+        // const senha = window.document.getElementById("senha").value
+        // // const body = { "POST"}
+        // const options = {
+        //     method: 'POST',
+        //     body: Object.keys(body)
+        //         .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(body[k])}`)
+        //         .join('&')
+        // }
 
-        return fetch('http://exemplo.com/usuario', options)
-            .then(T => T.json());
+        // return fetch('http://exemplo.com/usuario', options)
+        //     .then(T => T.json());
     }
-
 
 </script>

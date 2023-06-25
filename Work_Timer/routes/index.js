@@ -5,7 +5,7 @@ const cadastro = require("./cadastro.routes");
 const auth = require("./auth.router");
 
 //adionando models
-const Post = require('../models/Post')
+const Post = require('../models/post')
 const routes = new express.Router();
 
 
@@ -13,11 +13,6 @@ const routes = new express.Router();
 // //    res.render('login/login')
 //     res.send("Teste");
 // })
-
-router.get('/', (req, res) => {
-    res.send('Logado com Sucesso!')
-})
-
 
 routes.use("/funcionarios", funcionariosRoutes);
 routes.use("/cadastro", cadastro);

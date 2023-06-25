@@ -1,0 +1,31 @@
+<div class="wrapper fadeInDown">
+    <section id="cadastro">
+        {{#each erros}}
+        <div class="alert alert-danger">{{message}}</div>
+        {{else}}
+        {{/each}}
+        <form action="/cadastro" method="post">
+            <ul>
+                <li>
+                    <span>User Name</span>
+                    <input type="text" name="name" class=" form form-control"placeholder="User Name">
+                </li>
+                <li>
+                    <span>E-mail</span>
+                    <br>
+                    <input type="text" name="email" class="fadeIn second form form-control" placeholder="E-mail">
+                </li>
+                <li>
+                    <span>Password</span>
+                    <input type="password" id="password" class="form form-control fadeIn third" name="senha" placeholder="Password">
+                </li>
+                <li class="btns">
+                    <button type="submit" class="btn btn-info">Enviar</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </li>
+                <li><a href="/">Já tenho Conta</a></li>
+            </ul>
+
+        </form>
+    </section>
+</div>

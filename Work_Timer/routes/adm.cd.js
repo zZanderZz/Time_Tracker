@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcryptjs = require('bcryptjs')
 
-const Post = require('../models/Post')
+const Post = require('../models/post')
 
 router.get('/', (req, res) => {
     const pwd = 'secret'
