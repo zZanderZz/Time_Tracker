@@ -20,7 +20,7 @@ ul {
     margin: 0;
     padding: 0px;
     overflow: hidden;
-    background-color: #007bff;
+    background-color: #03b961;
 }
 
 li {
@@ -41,7 +41,7 @@ li a {
 /* Change the link color to #111 (black) on hover */
 
 li a:hover {
-    background-color: #006bdd;
+    background-color: #03964f;
 }
 
 /* CONTINUATION */
@@ -134,7 +134,7 @@ hr {
 
 .dentroDaTarefa textarea {
     border: none;
-    background-color: #ff000000;
+    background-color: #cfcfcf;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -146,13 +146,14 @@ hr {
     border-style: none;
     overflow: auto;
     border-color: transparent;
+    border-radius: 10px;
 }
 
 
 /* -------------------------------------------- */
 
 .dropbtn {
-    background-color: #007bff;
+    background-color: #03b961;
     color: white;
     padding: 12px 12px 6px 12px;
     font-size: 16px;
@@ -186,7 +187,6 @@ hr {
 
 .dropdown-content a:hover {
     background-color: #d5d5d5;
-    ;
 }
 
 .dropdown:hover {
@@ -198,7 +198,7 @@ hr {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #d5d5d5;
+    background-color: #03964f;
 }
 
 .input-style {

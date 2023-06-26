@@ -44,24 +44,67 @@
                 </div>
                 <div class="Recolhivel" style="display: none;">
                     <div class="dentroDaTarefa">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et dui mauris. Praesent accumsan vulputate ipsum tempor tristique. Sed blandit vel sapien congue porta. Ut tempor eget tellus non interdum. Fusce semper dui eget tortor blandit sagittis. Aliquam sollicitudin dignissim malesuada. Vivamus pretium placerat placerat. Integer faucibus lacus odio, eu consectetur ipsum ultrices in. Curabitur porta augue eget magna tincidunt scelerisque. Maecenas at faucibus quam, sit amet eleifend justo. Sed egestas neque et mauris porta tempus. Etiam sit amet ligula dictum, sollicitudin dolor elementum, consequat augue. Duis ac laoreet tellus, sit amet elementum odio. Donec non tellus mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h2>
+                        <h2>Fazer café quando for hora do almoço.</h2>
                     </div>
+                    <div id="timer" class="timer">89:20</div>
                     <button class="marca-lida-btn" onclick="marcarConcluida(this)">Marcar Como Concluída</button>
+                    <a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=+5546999782736&text=Ol%C3%A1,%20gostaria%20de%20iniciar%20uma%20conversa!">Fazer Upload de Arquivos</a>
                 </div>
             </div>
             <div class="Tarefas">
                 <div class="cabe-tarefas">
-                    <h4>Tarefa 1</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                    <h4 style="color: red;">Tarefa 2</h4><a href="#"><span class="material-icons">chevron_right</span></a>
                 </div>
                 <div class="Recolhivel" style="display: none;">
                     <div class="dentroDaTarefa">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et dui mauris. Praesent accumsan vulputate ipsum tempor tristique. Sed blandit vel sapien congue porta. Ut tempor eget tellus non interdum. Fusce semper dui eget tortor blandit sagittis. Aliquam sollicitudin dignissim malesuada. Vivamus pretium placerat placerat. Integer faucibus lacus odio, eu consectetur ipsum ultrices in. Curabitur porta augue eget magna tincidunt scelerisque. Maecenas at faucibus quam, sit amet eleifend justo. Sed egestas neque et mauris porta tempus. Etiam sit amet ligula dictum, sollicitudin dolor elementum, consequat augue. Duis ac laoreet tellus, sit amet elementum odio. Donec non tellus mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h2>
+                        <h2>Teste 123</h2>
                     </div>
                     <button class="marca-lida-btn" onclick="marcarConcluida(this)">Marcar Como Concluída</button>
+                    <a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=+5546999782736&text=Ol%C3%A1,%20gostaria%20de%20iniciar%20uma%20conversa!">Fazer Upload de Arquivos</a>
+                    <div id="timer2" class="timer" style="color: red;">00:00</div>
+                </div>
+            </div>
+            <div class="Tarefas">
+                <div class="cabe-tarefas">
+                    <h4 style="color: red;">Tarefa 3</h4><a href="#"><span class="material-icons">chevron_right</span></a>
+                </div>
+                <div class="Recolhivel" style="display: none;">
+                    <div class="dentroDaTarefa">
+                        <h2>aiosjfgoiajewg</h2>
+                    </div>
+                    <button class="marca-lida-btn" onclick="marcarConcluida(this)">Marcar Como Concluída</button>
+                    <a class="whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=+5546999782736&text=Ol%C3%A1,%20gostaria%20de%20iniciar%20uma%20conversa!">Fazer Upload de Arquivos</a>
+                    <div id="timer" class="timer" style="color: red;">00:00</div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        window.onload = function() {
+          var minutes = 89;
+          var seconds = 20;
+          
+          var countdown = setInterval(function() {
+            seconds--;
+            if (seconds < 0) {
+              minutes--;
+              seconds = 59;
+            }
+            
+            if (minutes < 0) {
+              clearInterval(countdown);
+              alert("Tempo esgotado!");
+            }
+            
+            document.getElementById("timer").textContent = padZero(minutes) + ":" + padZero(seconds);
+          }, 1000);
+          
+          function padZero(num) {
+            return (num < 10 ? "0" : "") + num;
+          }
+        }
+    </script>
 
     <script>
         // Função para marcar a tarefa como concluída

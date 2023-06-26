@@ -3,7 +3,7 @@ body{
     margin: 0;
     background-image: url("/imagens/background-image.png");
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
 }
 
 /* Landing Page */
